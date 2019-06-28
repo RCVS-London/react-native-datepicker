@@ -1,8 +1,7 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 let style = StyleSheet.create({
   dateTouch: {
-    width: 142
   },
   dateTouchBody: {
     flexDirection: 'row',
@@ -11,7 +10,6 @@ let style = StyleSheet.create({
     justifyContent: 'center'
   },
   dateIcon: {
-    width: 32,
     height: 32,
     marginLeft: 5,
     marginRight: 5
@@ -28,7 +26,6 @@ let style = StyleSheet.create({
     color: '#333'
   },
   placeholderText: {
-    color: '#c9c9c9'
   },
   datePickerMask: {
     flex: 1,
