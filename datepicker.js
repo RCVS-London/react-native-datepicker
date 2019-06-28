@@ -355,8 +355,8 @@ class DatePicker extends Component {
               type="solid"
               label={this.getTitleElement()}
               ediatble={false}
-              leftIconMode="inset"
-              leftIconName="Ionicons/ios-timer"
+              leftIconMode = "inset"
+              leftIconName = "MaterialCommunityIcons/calendar-blank"
             />
           </View>
           {Platform.OS === 'ios' && <Modal
