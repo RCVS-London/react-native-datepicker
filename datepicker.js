@@ -160,17 +160,19 @@ class DatePicker extends Component {
     const { date, placeholder, customStyles, allowFontScaling } = this.props;
 
     if (!date && placeholder) {
-      return (
-        <Text allowFontScaling={allowFontScaling} style={[Style.placeholderText, customStyles.placeholderText]}>
-          {placeholder}
-        </Text>
-      );
+      return placeholder;
+      //(
+        // <Text allowFontScaling={allowFontScaling} style={[Style.placeholderText, customStyles.placeholderText]}>
+          // {placeholder}
+        // </Text>
+      // );
     }
-    return (
-      <Text allowFontScaling={allowFontScaling} style={[Style.dateText, customStyles.dateText]}>
-        {this.getDateStr()}
-      </Text>
-    );
+    return this.getDateStr();
+    // (
+      // <Text allowFontScaling={allowFontScaling} style={[Style.dateText, customStyles.dateText]}>
+        // {this.getDateStr()}
+      // </Text>
+    // );
   }
 
   onDateChange(date) {
@@ -353,10 +355,11 @@ class DatePicker extends Component {
           <View pointerEvents="none">
             <TextField
               type="solid"
-              label={this.getTitleElement()}
+              label={"Date"}
               ediatble={false}
               leftIconMode = "inset"
               leftIconName = "MaterialCommunityIcons/calendar-blank"
+              value={this.getTitleElement() === "Date" ? null : this.getTitleElement() }
             />
           </View>
           {Platform.OS === 'ios' && <Modal
