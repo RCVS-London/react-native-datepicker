@@ -332,7 +332,9 @@ class DatePicker extends Component {
       cancelBtnTestID,
       confirmBtnTestID,
       allowFontScaling,
-      locale
+      locale,
+      leftIconMode,
+      leftIconName
     } = this.props;
 
     const dateInputStyle = [
@@ -357,8 +359,10 @@ class DatePicker extends Component {
               type="solid"
               label={"Date"}
               ediatble={false}
-              leftIconMode = "inset"
-              leftIconName = "MaterialCommunityIcons/calendar-blank"
+              leftIconMode = {leftIconMode ? leftIconMode : null}
+              leftIconName = {
+                leftIconName ? leftIconName : null
+              }
               value={this.getTitleElement() === "Date" ? null : this.getTitleElement() }
             />
           </View>
